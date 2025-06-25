@@ -1,0 +1,87 @@
+body {
+  background: #fff6fa;
+  color: #4a3b47;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.header {
+  background: linear-gradient(90deg, #f9c5d1 0%, #fbc2eb 100%);
+  color: #4a3b47;
+  border-bottom: 4px solid #f7b2c4;
+  box-shadow: 0 2px 8px #f9c5d1aa;
+}
+.header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+.header .navbar-nav .nav-link {
+  color: #4a3b47;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.2s;
+}
+.header .navbar-nav .nav-link:hover {
+  color: #e75480;
+}
+section {
+  border-radius: 18px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 16px #fbc2eb33;
+}
+#sobre-mi {
+  background: #ffe0f7;
+}
+#galeria {
+  background: #f3e7fa;
+}
+#experiencia {
+  background: #ffe0f7;
+}
+#contacto {
+  background: #f3e7fa;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #f9c5d1 0%, #fbc2eb 100%);
+  border: none;
+  color: #4a3b47;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: #e75480;
+  color: #fff;
+}
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+.timeline li {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid #f7b2c4;
+  position: relative;
+}
+.timeline li:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: #f9c5d1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.footer {
+  background: linear-gradient(90deg, #fbc2eb 0%, #f9c5d1 100%);
+  color: #4a3b47;
+  border-top: 4px solid #f7b2c4;
+  box-shadow: 0 -2px 8px #f9c5d1aa;
+}
+.footer .social-links a img {
+  filter: grayscale(0.2) brightness(0.9);
+  transition: filter 0.2s;
+}
+.footer .social-links a:hover img {
+  filter: grayscale(0) brightness(1.2);
+} 

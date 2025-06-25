@@ -1,0 +1,42 @@
+.custom-header {
+  background: #a48ad4;
+  color: #fff;
+  border-bottom: 6px solid #e6c6f5;
+  box-shadow: 0 2px 12px #a48ad455;
+  position: relative;
+}
+.custom-header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.custom-header .lead {
+  font-size: 1.3rem;
+  color: #fbefff;
+  margin-bottom: 1rem;
+}
+.custom-header .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 600;
+  margin: 0 12px;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.custom-header .navbar-nav .nav-link:hover {
+  color: #ffe0f7;
+}
+.header-decor {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.star {
+  font-size: 2rem;
+  color: #fffbe7;
+  opacity: 0.7;
+} 

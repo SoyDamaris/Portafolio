@@ -1,0 +1,28 @@
+.custom-footer {
+  background: #a48ad4;
+  color: #fff;
+  border-top: 6px solid #e6c6f5;
+  box-shadow: 0 -2px 12px #a48ad455;
+  position: relative;
+}
+.custom-footer .social-links a img {
+  filter: grayscale(0.2) brightness(0.9);
+  transition: filter 0.2s;
+}
+.custom-footer .social-links a:hover img {
+  filter: grayscale(0) brightness(1.2);
+}
+.footer-decor {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.star {
+  font-size: 2rem;
+  color: #fffbe7;
+  opacity: 0.7;
+} 
