@@ -8,8 +8,16 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
+  <!-- Fondo animado de burbujas tecnológicas -->
+  <div class="body-animated-bg">
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+  </div>
+
   <!-- Header reutilizable -->
   <div id="header-container"></div>
 
@@ -17,21 +25,23 @@
   <section id="sobre-mi" class="container py-5">
     <div class="row align-items-center">
       <div class="col-md-4 text-center">
-        <img src="avatar.png" alt="Damaris Vasquez" class="img-fluid rounded-circle shadow-lg mb-3" style="width: 200px;">
+        <!-- Cambia la imagen por tu avatar de Pixabay o Pexels -->
+        <img src="img/damarisvásquez.jpeg" class="img-fluid rounded-circle shadow-lg mb-3" style="width: 200px;">
       </div>
       <div class="col-md-8">
         <h2 class="mb-3">Sobre mí</h2>
-        <p>Soy una desarrolladora web apasionada por crear experiencias digitales elegantes, funcionales y atractivas. Me especializo en HTML, CSS, JavaScript y Bootstrap, y disfruto combinar creatividad con tecnología para lograr resultados únicos.</p>
+        <!-- Escribe aquí tu descripción personal -->
+        <p>Soy una desarrolladora web apasionada por crear experiencias digitales elegantes, funcionales y atractivas. Me especializo en HTML, CSS, JavaScript y disfruto combinar creatividad con tecnología para lograr resultados únicos.</p>
       </div>
     </div>
   </section>
 
-  <!-- Galería de Portafolio -->
+  <!-- Portafolio de Proyectos -->
   <section id="galeria" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">Mi Galería</h2>
+      <h2 class="text-center mb-4">Portafolio</h2>
       <div class="row" id="portfolio-gallery">
-        <!-- Proyectos de portafolio aquí -->
+        <!-- Los proyectos se cargan dinámicamente desde script.js -->
       </div>
     </div>
   </section>
@@ -40,15 +50,23 @@
   <section id="experiencia" class="container py-5">
     <h2 class="text-center mb-4">Experiencia</h2>
     <ul class="timeline">
+      <!-- Experiencia profesional principal -->
       <li>
-        <h5>Desarrolladora Web Freelance</h5>
-        <span>2021 - Presente</span>
-        <p>He trabajado en diversos proyectos web para clientes de diferentes sectores, enfocándome en la calidad y la satisfacción del cliente.</p>
+        <h5>Desarrolladora y Fundadora | EduGuide</h5>
+        <span>Expo Existó 2025</span>
+        <p>Creé EduGuide, una plataforma web que orienta a estudiantes en la elección de su carrera, universidades y becas disponibles. Diseñé la interfaz, estructuré el contenido y presenté el proyecto en Expo Existó con visión de crecimiento sostenible y regional.</p>
       </li>
+      <!-- Emprendimiento personal -->
       <li>
-        <h5>Estudios en Ingeniería en Sistemas</h5>
-        <span>2018 - 2022</span>
-        <p>Formación académica sólida en desarrollo de software y tecnologías web.</p>
+        <h5>Emprendedora y Diseñadora | Creaciones Vásquez</h5>
+        <span>Emprendimiento personal de regalos personalizados</span>
+        <p>Fundé Creaciones Vásquez, un negocio creativo donde combino diseño artesanal y herramientas digitales. Desarrollé el sitio web de la marca, gestiono pedidos personalizados y lidero la presencia online del proyecto.</p>
+      </li>
+      <!-- Nueva experiencia: Volunlink -->
+      <li>
+        <h5>Creadora | Volunlink</h5>
+        <span>Aplicación de voluntariados – ODS 17</span>
+        <p>Desarrollé Volunlink, una app que conecta a jóvenes con oportunidades de voluntariado alineadas al ODS 17. Participé en el diseño, la estrategia de impacto y el desarrollo del prototipo en Flutter Flow, promoviendo alianzas entre juventud y organizaciones sociales.</p>
       </li>
     </ul>
   </section>
@@ -93,6 +111,50 @@
     }
     loadComponent('header-container', 'header.html');
     loadComponent('footer-container', 'footer.html');
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const gallery = document.getElementById('portfolio-gallery');
+      // Proyectos reales
+      const projects = [
+        {
+          title: 'EduGuide',
+          img: 'img/eduguide.png',
+          link: '#'
+        },
+        {
+          title: 'Creaciones Vásquez',
+          img: 'img/creaciones.png',
+          link: '#'
+        },
+        {
+          title: 'Volunlink',
+          img: 'img/volunlink.png',
+          link: '#'
+        }
+      ];
+      projects.forEach(proj => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4 mb-4';
+        col.innerHTML = `
+          <div class="card shadow-sm h-100">
+            <img src="${proj.img}" class="card-img-top" alt="${proj.title}">
+            <div class="card-body">
+              <h5 class="card-title">${proj.title}</h5>
+              <a href="${proj.link}" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        `;
+        gallery.appendChild(col);
+      });
+
+      // Manejo del formulario de contacto
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('¡Gracias por tu mensaje! Pronto me pondré en contacto contigo.');
+        form.reset();
+      });
+    });
   </script>
 </body>
 </html> 
