@@ -1,0 +1,132 @@
+/* BODY PROFESIONAL Y TECNOLÓGICO */
+body {
+  /* Fondo animado con gradiente dinámico */
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fff6fa 0%, #e0e7ff 100%);
+  color: #4a3b47;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo animado con burbujas tecnológicas */
+.body-animated-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  background: linear-gradient(135deg, #a48ad4 60%, #fbc2eb 100%);
+  animation: floatBubble 12s infinite alternate ease-in-out;
+}
+.bubble1 { width: 120px; height: 120px; left: 10vw; top: 60vh; animation-delay: 0s; }
+.bubble2 { width: 80px; height: 80px; right: 12vw; top: 30vh; animation-delay: 2s; }
+.bubble3 { width: 60px; height: 60px; left: 50vw; bottom: 10vh; animation-delay: 4s; }
+@keyframes floatBubble {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-40px) scale(1.08); }
+}
+
+/* Secciones principales con animación y estilo tarjeta */
+section {
+  border-radius: 22px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 24px #a48ad433;
+  background: rgba(255,255,255,0.85);
+  position: relative;
+  z-index: 1;
+  animation: fadeInSection 1.2s cubic-bezier(.5,1.5,.5,1) both;
+}
+@keyframes fadeInSection {
+  0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Comentarios para personalización de secciones */
+/* SOBRE MÍ: Pon tu foto y descripción personal aquí */
+#sobre-mi {
+  background: rgba(234, 224, 255, 0.7);
+}
+/* GALERÍA: Aquí van tus proyectos destacados */
+#galeria {
+  background: rgba(243, 231, 250, 0.7);
+}
+/* EXPERIENCIA: Lista tus experiencias y estudios aquí */
+#experiencia {
+  background: rgba(234, 224, 255, 0.7);
+}
+/* CONTACTO: Formulario y datos de contacto */
+#contacto {
+  background: rgba(243, 231, 250, 0.7);
+}
+/* FIN BODY PROFESIONAL Y TECNOLÓGICO */
+
+.header {
+  background: linear-gradient(90deg, #f9c5d1 0%, #fbc2eb 100%);
+  color: #4a3b47;
+  border-bottom: 4px solid #f7b2c4;
+  box-shadow: 0 2px 8px #f9c5d1aa;
+}
+.header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+.header .navbar-nav .nav-link {
+  color: #4a3b47;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.2s;
+}
+.header .navbar-nav .nav-link:hover {
+  color: #e75480;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #f9c5d1 0%, #fbc2eb 100%);
+  border: none;
+  color: #4a3b47;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: #e75480;
+  color: #fff;
+}
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+.timeline li {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid #f7b2c4;
+  position: relative;
+}
+.timeline li:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: #f9c5d1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.footer {
+  background: linear-gradient(90deg, #fbc2eb 0%, #f9c5d1 100%);
+  color: #4a3b47;
+  border-top: 4px solid #f7b2c4;
+  box-shadow: 0 -2px 8px #f9c5d1aa;
+}
+.footer .social-links a img {
+  filter: grayscale(0.2) brightness(0.9);
+  transition: filter 0.2s;
+}
+.footer .social-links a:hover img {
+  filter: grayscale(0) brightness(1.2);
+} 

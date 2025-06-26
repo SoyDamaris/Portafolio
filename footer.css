@@ -1,0 +1,92 @@
+/* FOOTER PROFESIONAL Y TECNOLÓGICO */
+.custom-footer {
+  background: linear-gradient(120deg, #5e60ce 60%, #a48ad4 100%);
+  color: #fff;
+  border-top: 6px solid #e6c6f5;
+  box-shadow: 0 -2px 24px #a48ad455;
+  position: relative;
+  overflow: hidden;
+}
+.custom-footer p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+}
+.custom-footer .social-links a img {
+  filter: drop-shadow(0 2px 6px #5e60ce55);
+  transition: transform 0.2s, filter 0.2s;
+}
+.custom-footer .social-links a:hover img {
+  transform: scale(1.15) rotate(-8deg);
+  filter: drop-shadow(0 4px 12px #fffbe7cc);
+}
+/* Elementos decorativos animados */
+.footer-animated-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  animation: floatCircleFooter 8s infinite alternate ease-in-out;
+}
+.circle1 {
+  width: 120px; height: 120px;
+  background: #fffbe7;
+  top: -30px; left: -40px;
+  animation-delay: 0s;
+}
+.circle2 {
+  width: 80px; height: 80px;
+  background: #fbc2eb;
+  bottom: -20px; right: -30px;
+  animation-delay: 2s;
+}
+@keyframes floatCircleFooter {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-20px) scale(1.08); }
+}
+.line {
+  position: absolute;
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #fffbe7 0%, #fbc2eb 100%);
+  opacity: 0.25;
+  animation: moveLineFooter 7s infinite alternate ease-in-out;
+}
+.line1 {
+  top: 20px; right: 12%;
+  transform: rotate(18deg);
+  animation-delay: 1s;
+}
+.line2 {
+  bottom: 18px; left: 14%;
+  transform: rotate(-12deg);
+  animation-delay: 3s;
+}
+@keyframes moveLineFooter {
+  0% { transform: translateX(0) scaleX(1) rotate(var(--angle,0deg)); }
+  100% { transform: translateX(20px) scaleX(1.1) rotate(var(--angle,0deg)); }
+}
+/* FIN FOOTER PROFESIONAL Y TECNOLÓGICO */
+
+.footer-decor {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.star {
+  font-size: 2rem;
+  color: #fffbe7;
+  opacity: 0.7;
+} 
